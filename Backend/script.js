@@ -1,30 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const externalLinks = document.querySelectorAll('a[target="_blank"]');
-    const modal = document.getElementById('confirmationModal');
-    const yesBtn = document.getElementById('yesBtn');
-    const noBtn = document.getElementById('noBtn');
-    let currentLink = null;
+    fetch('./Backend/Data.json')
+        .then(response => response.json())
+        .then(data => {
+            const booksList = document.getElementById('booksList');
+            const papersList = document.getElementById('papersList');
+            const otherPapersList = document.getElementById('otherPapersList');
 
-    externalLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            modal.style.display = 'block';
-            currentLink = this.href;
+            // Populate Books section
+            data.books.forEach(book => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = book.link;
+                link.textContent = book.title;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                booksList.appendChild(listItem);
+            });
+
+            // Populate Papers section
+            data.papers.forEach(paper => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = paper.link;
+                link.textContent = paper.title;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                papersList.appendChild(listItem);
+            });
+
+            // Populate Other Resources section
+            data.otherPapers.forEach(paper => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = paper.link;
+                link.textContent = paper.title;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                otherPapersList.appendChild(listItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
         });
-    });
-
-    yesBtn.onclick = function() {
-        modal.style.display = 'none';
-        window.open(currentLink, '_blank');
-    };
-
-    noBtn.onclick = function() {
-        modal.style.display = 'none';
-    };
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
 });
