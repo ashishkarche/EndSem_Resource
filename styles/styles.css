@@ -73,11 +73,12 @@ footer p {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
     display: none;
-    max-width: 90%; /* Adjust as needed */
-    width: 300px; /* Adjust as needed */
+    max-width: 90%;
+    width: 300px;
+    text-align: center;
 }
 
 .alert p {
@@ -98,10 +99,27 @@ footer p {
     border-radius: 4px;
     background-color: #007bff;
     color: #fff;
+    min-width: 80px; /* Adjust as needed */
 }
 
 .alert-btns button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 400px) {
+    .alert {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .alert-btns {
+        flex-direction: column;
+    }
+
+    .alert-btns button {
+        margin: 5px 0;
+    }
 }
 
 
