@@ -64,7 +64,6 @@ footer:hover {
 footer p {
     margin: 0;
 }
-
 .alert {
     position: fixed;
     top: 50%;
@@ -77,6 +76,8 @@ footer p {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 9999;
     display: none;
+    max-width: 90%; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
 }
 
 .alert p {
@@ -85,11 +86,13 @@ footer p {
 
 .alert-btns {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .alert-btns button {
     padding: 8px 16px;
-    margin-right: 10px;
+    margin: 0 5px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
@@ -100,6 +103,7 @@ footer p {
 .alert-btns button:hover {
     background-color: #0056b3;
 }
+
 
 
 @keyframes fadeIn {
