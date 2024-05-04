@@ -1,41 +1,20 @@
-// Function to show alert message
-function showAlert(message, confirmCallback) {
-    const alertDiv = document.createElement('div');
-    alertDiv.className = 'alert';
-    alertDiv.innerHTML = `
-        <p>${message}</p>
-        <div class="alert-btns">
-            <button id="confirmBtn">Confirm</button>
-            <button id="cancelBtn">Cancel</button>
-        </div>
-    `;
-    document.body.appendChild(alertDiv);
-
-    // Add event listeners to buttons
-    const confirmBtn = document.getElementById('confirmBtn');
-    const cancelBtn = document.getElementById('cancelBtn');
-
-    confirmBtn.addEventListener('click', () => {
-        if (typeof confirmCallback === 'function') {
-            confirmCallback();
-        }
-        document.body.removeChild(alertDiv);
-    });
-
-    cancelBtn.addEventListener('click', () => {
-        document.body.removeChild(alertDiv);
-    });
-
-    // Display alert
-    alertDiv.style.display = 'block';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to open external links with confirmation
+    const modal = document.getElementById("myModal");
+    const confirmBtn = document.getElementById("confirmBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Function to open external links with modal confirmation
     function openExternalLink(link) {
-        showAlert('You are about to leave this page and visit an external site. Continue?', function() {
+        modal.style.display = "block";
+
+        confirmBtn.onclick = function() {
             window.open(link, '_blank');
-        });
+            modal.style.display = "none";
+        }
+
+        cancelBtn.onclick = function() {
+            modal.style.display = "none";
+        }
     }
 
     // Fetch data from Data.json

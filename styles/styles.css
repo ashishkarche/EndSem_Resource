@@ -64,62 +64,49 @@ footer:hover {
 footer p {
     margin: 0;
 }
-.alert {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+
+/* Modal */
+.modal {
     display: none;
-    max-width: 90%;
-    width: 300px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons {
     text-align: center;
 }
 
-.alert p {
-    margin: 0;
-}
-
-.alert-btns {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.alert-btns button {
-    padding: 8px 16px;
-    margin: 0 5px;
+button {
+    margin: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    min-width: 80px; /* Adjust as needed */
-}
-
-.alert-btns button:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive Styles */
-@media (max-width: 400px) {
-    .alert {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .alert-btns {
-        flex-direction: column;
-    }
-
-    .alert-btns button {
-        margin: 5px 0;
-    }
 }
 
 
