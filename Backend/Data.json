@@ -1,52 +1,259 @@
 {
-    "books": [
-        {
-            "title": "High Performance Computation",
-            "link": "https://drive.google.com/drive/folders/1f5MX_IDBzvdxwXjZfTz5S8dX8Nn27Y6l?usp=sharing"
+    "first-year": {
+        "sem1": {
+            "books": [
+                {
+                    "title": "First Year Semester 1 Book 1",
+                    "link": "https://example.com/book1_sem1"
+                },
+                {
+                    "title": "First Year Semester 1 Book 2",
+                    "link": "https://example.com/book2_sem1"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "First Year Semester 1 Paper 1",
+                    "link": "https://example.com/paper1_sem1"
+                },
+                {
+                    "title": "First Year Semester 1 Paper 2",
+                    "link": "https://example.com/paper2_sem1"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 1 Papers",
+                    "link": "https://example.com/pune_uni_sem1"
+                }
+            ]
         },
-        {
-            "title": "Deep Learning",
-            "link": "https://drive.google.com/drive/folders/1Q6ANk8qeuPet_VtgmWgJ7N63CuQQUw9r?usp=sharing"
-        },
-        {
-            "title": "Software Defined Network",
-            "link": "https://drive.google.com/drive/folders/1AZxh-eMK-xo4c-tscaoeZ3AyViCrnzQV?usp=sharing"
-        },
-        {
-            "title": "Business Intelligence",
-            "link": "https://drive.google.com/file/d/1HhywEeEBQpG39dKvAyMvejrai9hIekvG/view?usp=sharing"
+        "sem2": {
+            "books": [
+                {
+                    "title": "First Year Semester 2 Book 1",
+                    "link": "https://example.com/book1_sem2"
+                },
+                {
+                    "title": "First Year Semester 2 Book 2",
+                    "link": "https://example.com/book2_sem2"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "First Year Semester 2 Paper 1",
+                    "link": "https://example.com/paper1_sem2"
+                },
+                {
+                    "title": "First Year Semester 2 Paper 2",
+                    "link": "https://example.com/paper2_sem2"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 2 Papers",
+                    "link": "https://example.com/pune_uni_sem2"
+                }
+            ]
         }
-    ],
-    "papers": [
-        {
-            "title": "High Performance Computation (2012 pattern)",
-            "link": "https://drive.google.com/drive/folders/15VNpe-58_tI5eazmbPyy1YHCnc7r9oUJ?usp=sharing"
+    },
+    "second-year": {
+        "sem1": {
+            "books": [
+                {
+                    "title": "Second Year Semester 1 Book 1",
+                    "link": "https://example.com/book1_sem1"
+                },
+                {
+                    "title": "Second Year Semester 1 Book 2",
+                    "link": "https://example.com/book2_sem1"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "Second Year Semester 1 Paper 1",
+                    "link": "https://example.com/paper1_sem1"
+                },
+                {
+                    "title": "Second Year Semester 1 Paper 2",
+                    "link": "https://example.com/paper2_sem1"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 1 Papers",
+                    "link": "https://example.com/pune_uni_sem1"
+                }
+            ]
         },
-        {
-            "title": "High Performance Computation (2015 pattern)",
-            "link": "https://drive.google.com/drive/folders/1ZWTty9EtTltL-PmhCrtyM1KgxUaPpirG?usp=sharing"
-        },
-        {
-            "title": "High Performance Computation (2019 pattern)",
-            "link": "https://drive.google.com/drive/folders/1j7IFIeXhbIywTsc2jcLWyx-pNVhf_F2I?usp=sharing"
-        },
-        {
-            "title": "Deep Learning (2019 Pattern)",
-            "link": "https://drive.google.com/drive/folders/1n731swhWlOHzR32tJyEdYnGofHYgx0qa?usp=sharing"
-        },
-        {
-            "title": "Software Defined Network (2019 pattern)",
-            "link": "https://drive.google.com/drive/folders/1GEfmS73CKcs3HeuHMMk5uk6xnWR-PBZq?usp=sharing"
-        },
-        {
-            "title": "Business Intelligence (2019 pattern)",
-            "link": "https://drive.google.com/drive/folders/1wnHTBuAxtaxureJzLm3ED_46RPTahn_B?usp=sharing"
+        "sem2": {
+            "books": [
+                {
+                    "title": "Second Year Semester 2 Book 1",
+                    "link": "https://example.com/book1_sem2"
+                },
+                {
+                    "title": "Second Year Semester 2 Book 2",
+                    "link": "https://example.com/book2_sem2"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "Second Year Semester 2 Paper 1",
+                    "link": "https://example.com/paper1_sem2"
+                },
+                {
+                    "title": "Second Year Semester 2 Paper 2",
+                    "link": "https://example.com/paper2_sem2"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 2 Papers",
+                    "link": "https://example.com/pune_uni_sem2"
+                }
+            ]
         }
-    ],
-    "otherPapers": [
-        {
-            "title": "Pune University Papers",
-            "link": "http://exam.unipune.ac.in/Pages/PreviousQuestionPapers.html"
+    },
+    "third-year":{
+        "sem1": {
+            "books": [
+                {
+                    "title": "Third Year Semester 1 Book 1",
+                    "link": "https://example.com/book1_sem1"
+                },
+                {
+                    "title": "Third Year Semester 1 Book 2",
+                    "link": "https://example.com/book2_sem1"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "Third Year Semester 1 Paper 1",
+                    "link": "https://example.com/paper1_sem1"
+                },
+                {
+                    "title": "Third Year Semester 1 Paper 2",
+                    "link": "https://example.com/paper2_sem1"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 1 Papers",
+                    "link": "https://example.com/pune_uni_sem1"
+                }
+            ]
+        },
+        "sem2": {
+            "books": [
+                {
+                    "title": "Third Year Semester 2 Book 1",
+                    "link": "https://example.com/book1_sem2"
+                },
+                {
+                    "title": "Third Year Semester 2 Book 2",
+                    "link": "https://example.com/book2_sem2"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "Third Year Semester 2 Paper 1",
+                    "link": "https://example.com/paper1_sem2"
+                },
+                {
+                    "title": "Third Year Semester 2 Paper 2",
+                    "link": "https://example.com/paper2_sem2"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 2 Papers",
+                    "link": "https://example.com/pune_uni_sem2"
+                }
+            ]
         }
-    ]
+    },
+    "fourth-year": {
+        "sem1": {
+            "books": [
+                {
+                    "title": "Fourth Year Semester 1 Book 1",
+                    "link": "https://example.com/book1_sem1"
+                },
+                {
+                    "title": "Fourth Year Semester 1 Book 2",
+                    "link": "https://example.com/book2_sem1"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "Fourth Year Semester 1 Paper 1",
+                    "link": "https://example.com/paper1_sem1"
+                },
+                {
+                    "title": "Fourth Year Semester 1 Paper 2",
+                    "link": "https://example.com/paper2_sem1"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Semester 1 Papers",
+                    "link": "https://example.com/pune_uni_sem1"
+                }
+            ]
+        },
+        "sem2": {
+            "books": [
+                {
+                    "title": "High Performance Computation",
+                    "link": "https://drive.google.com/drive/folders/1f5MX_IDBzvdxwXjZfTz5S8dX8Nn27Y6l?usp=sharing"
+                },
+                {
+                    "title": "Deep Learning",
+                    "link": "https://drive.google.com/drive/folders/1Q6ANk8qeuPet_VtgmWgJ7N63CuQQUw9r?usp=sharing"
+                },
+                {
+                    "title": "Software Defined Network",
+                    "link": "https://drive.google.com/drive/folders/1AZxh-eMK-xo4c-tscaoeZ3AyViCrnzQV?usp=sharing"
+                },
+                {
+                    "title": "Business Intelligence",
+                    "link": "https://drive.google.com/file/d/1HhywEeEBQpG39dKvAyMvejrai9hIekvG/view?usp=sharing"
+                }
+            ],
+            "papers": [
+                {
+                    "title": "High Performance Computation (2012 pattern)",
+                    "link": "https://drive.google.com/drive/folders/15VNpe-58_tI5eazmbPyy1YHCnc7r9oUJ?usp=sharing"
+                },
+                {
+                    "title": "High Performance Computation (2015 pattern)",
+                    "link": "https://drive.google.com/drive/folders/1ZWTty9EtTltL-PmhCrtyM1KgxUaPpirG?usp=sharing"
+                },
+                {
+                    "title": "High Performance Computation (2019 pattern)",
+                    "link": "https://drive.google.com/drive/folders/1j7IFIeXhbIywTsc2jcLWyx-pNVhf_F2I?usp=sharing"
+                },
+                {
+                    "title": "Deep Learning (2019 Pattern)",
+                    "link": "https://drive.google.com/drive/folders/1n731swhWlOHzR32tJyEdYnGofHYgx0qa?usp=sharing"
+                },
+                {
+                    "title": "Software Defined Network (2019 pattern)",
+                    "link": "https://drive.google.com/drive/folders/1GEfmS73CKcs3HeuHMMk5uk6xnWR-PBZq?usp=sharing"
+                },
+                {
+                    "title": "Business Intelligence (2019 pattern)",
+                    "link": "https://drive.google.com/drive/folders/1wnHTBuAxtaxureJzLm3ED_46RPTahn_B?usp=sharing"
+                }
+            ],
+            "otherPapers": [
+                {
+                    "title": "Pune University Papers",
+                    "link": "http://exam.unipune.ac.in/Pages/PreviousQuestionPapers.html"
+                }
+            ]
+        }
+        
+    }
 }

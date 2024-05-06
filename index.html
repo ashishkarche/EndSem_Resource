@@ -8,37 +8,60 @@
 </head>
 <body>
     <header>
-        <h1>Computer Engineering - 8th Semester Resources</h1>
+        <div class="header-container">
+            <div class="header-links">
+                <a href="#">Home</a>
+            </div>
+            <div class="upload-icon">
+                <a href="#" id="uploadBtn"><i class="fas fa-plus"></i> Upload</a>
+            </div>
+        </div>
     </header>
     <main>
-        <section id="books">
-            <h2>Books</h2>
-            <ul id="booksList"></ul>
+        <!-- First Year -->
+        <section id="first-year" class="year-section">
+            <h2>First Year</h2>
+            <div class="semester-links">
+                <div class="box" onclick="showPage('./first-year/sem1.html')">Semester 1</div>
+                <div class="box" onclick="showPage('./first-year/sem2.html')">Semester 2</div>
+            </div>
         </section>
-        <section id="papers">
-            <h2>Previous Year Question Papers</h2>
-            <ul id="papersList"></ul>
+
+        <!-- Second Year -->
+        <section id="second-year" class="year-section">
+            <h2>Second Year</h2>
+            <div class="semester-links">
+                <div class="box" onclick="showPage('./second-year/sem1.html')">Semester 1</div>
+                <div class="box" onclick="showPage('./second-year/sem2.html')">Semester 2</div>
+            </div>
         </section>
-        <section id="other-papers">
-            <h2>Other Resources</h2>
-            <ul id="otherPapersList"></ul>
+
+        <!-- Third Year -->
+        <section id="third-year" class="year-section">
+            <h2>Third Year</h2>
+            <div class="semester-links">
+                <div class="box" onclick="showPage('./third-year/sem1.html')">Semester 1</div>
+                <div class="box" onclick="showPage('./third-year/sem2.html')">Semester 2</div>
+            </div>
+        </section>
+
+        <!-- Fourth Year -->
+        <section id="fourth-year" class="year-section">
+            <h2>Fourth Year</h2>
+            <div class="semester-links">
+                <div class="box" onclick="showPage('./fourth-year/sem1.html')">Semester 1</div>
+                <div class="box" onclick="showPage('./fourth-year/sem2.html')">Semester 2</div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Computer Engineering Department</p>
     </footer>
-    
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Are you sure you want to leave this page and visit an external site?</p>
-          <div class="buttons">
-              <button id="confirmBtn">Yes</button>
-              <button id="cancelBtn">Cancel</button>
-          </div>
-        </div>
-      </div>
-      
-    <script src="./Backend/script.js"></script>
+
+    <script>
+        function showPage(pageURL) {
+            window.location.href = pageURL;
+        }
+    </script>
 </body>
 </html>
