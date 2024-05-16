@@ -1,3 +1,6 @@
+function showPage(pageURL) {
+    window.location.href = pageURL;
+}
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById("myModal");
     const confirmBtn = document.getElementById("confirmBtn");

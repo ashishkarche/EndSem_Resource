@@ -15,7 +15,7 @@
                 <a href="sem2.html">Semester-2</a>
             </div>
             <div class="upload-icon">
-                <a href="#"><i class="fas fa-plus"></i> Upload</a>
+                <a href="#" id="uploadBtn"><i class="fas fa-plus"></i> Upload</a>
             </div>
         </div>
     </header>
@@ -48,6 +48,19 @@
         </div>
     </div>
 
+        <!-- Modal for file upload -->
+        <div id="fileModal" class="modal1">
+            <div class="modal-content1">
+                <span class="close1" id="closeModal">&times;</span>
+                <h2>Select File to Upload</h2>
+                <input type="file" id="fileInput">
+                <button id="uploadFileBtn" class="upload-btn">Upload</button>
+            </div>
+        </div>
+    
+
     <script src="../Backend/script.js"></script>
+    <script src="../Backend/api.js"></script>
+
 </body>
 </html>
