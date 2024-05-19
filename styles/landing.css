@@ -10,21 +10,30 @@ body {
 header {
     background: #20232a;
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Change flex direction for mobile */
+    align-items: center; /* Center align for mobile */
     max-width: 800px;
     margin: 0 auto;
+}
+
+.header-links {
+    margin-top: 10px; /* Add margin for separation on mobile */
 }
 
 .header-links a {
     color: white;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 10px; /* Reduce margin for mobile */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.header-links a:hover {
+    color: #ddd; /* Change color on hover */
 }
 
 .upload-icon a {
@@ -32,10 +41,15 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .upload-icon a i {
     margin-right: 5px;
+}
+
+.upload-icon a:hover {
+    color: #ddd; /* Change color on hover */
 }
 
 /* Main Content */
@@ -44,32 +58,60 @@ main {
     margin: 20px auto;
     padding: 20px;
     background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Hero Section */
 .hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
     color: white;
     text-align: center;
-    padding: 100px 0;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 20px; /* Adjust padding for mobile */
 }
 
 .hero h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Reduce font size for mobile */
+    margin-bottom: 15px; /* Reduce margin for mobile */
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 16px; /* Reduce font size for mobile */
+    margin-bottom: 20px; /* Reduce margin for mobile */
 }
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.hero .btn:hover {
+    background-color: #0056b3; /* Darken background on hover */
+}
+
+
 
 /* Resource Cards */
 .resources {
-    margin-top: 40px;
+    margin-top: 30px; /* Adjust margin for mobile */
 }
 
 .resource-card {
@@ -77,21 +119,26 @@ main {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.resource-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .resource-card img {
-    width: 100px;
+    width: 80px; /* Reduce image size for mobile */
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 .resource-card h3 {
-    font-size: 24px;
+    font-size: 20px; /* Reduce font size for mobile */
     margin-bottom: 10px;
 }
 
 .resource-card p {
-    font-size: 16px;
+    font-size: 14px; /* Reduce font size for mobile */
     color: #666;
 }
 
@@ -100,5 +147,48 @@ footer {
     background: #20232a;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
+}
+
+/* Animation for scrolling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .header-links {
+        margin-top: 20px; /* Increase margin for mobile */
+    }
+
+    .resource-card {
+        padding: 15px; /* Reduce padding for mobile */
+        margin-bottom: 15px; /* Reduce margin for mobile */
+    }
+
+    .resource-card img {
+        width: 60px; /* Further reduce image size for mobile */
+    }
+
+    .resource-card h3 {
+        font-size: 18px; /* Further reduce font size for mobile */
+        margin-bottom: 8px; /* Reduce margin for mobile */
+    }
+
+    .resource-card p {
+        font-size: 12px; /* Further reduce font size for mobile */
+    }
 }
