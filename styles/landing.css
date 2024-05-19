@@ -1,0 +1,104 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #20232a;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.upload-icon a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.upload-icon a i {
+    margin-right: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Resource Cards */
+.resources {
+    margin-top: 40px;
+}
+
+.resource-card {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.resource-card img {
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.resource-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #20232a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
