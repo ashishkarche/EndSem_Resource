@@ -49,7 +49,7 @@ header {
 
 /* Header text animation */
 #animated-text {
-    animation: changeText 4s infinite;
+    animation: changeText 3s infinite;
     font-size: 36px;
     font-weight: bold;
 }

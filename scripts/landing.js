@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const animatedText = document.getElementById("animated-text");
-    const words = ["Resource", "Question Paper", "Learning Materials", "Tools"]; // Add your desired words here
+    const words = ["TextBook", "Question Paper", "Learning Materials"]; // Add your desired words here
     let index = 0;
 
     function changeWord() {
