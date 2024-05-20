@@ -49,11 +49,9 @@ header {
 
 /* Header text animation */
 #animated-text {
-    animation: changeText 5s infinite;
+    animation: changeText 4s infinite;
     font-size: 36px;
-    /* Adjust font size as needed */
     font-weight: bold;
-    /* Optional: Adjust font weight as needed */
 }
 
 @keyframes changeText {
