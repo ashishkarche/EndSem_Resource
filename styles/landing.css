@@ -3,7 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* Header */
@@ -15,51 +21,76 @@ header {
 
 .header-container {
     display: flex;
-    flex-direction: column; /* Change flex direction for mobile */
-    align-items: center; /* Center align for mobile */
+    justify-content: space-between;
+    /* Distribute space between elements */
+    align-items: center;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
+    /* Add padding for mobile */
 }
 
 .header-links {
-    margin-top: 10px; /* Add margin for separation on mobile */
+    display: flex;
+    /* Display links in a row */
 }
 
 .header-links a {
     color: white;
     text-decoration: none;
-    margin-right: 10px; /* Reduce margin for mobile */
-    transition: color 0.3s ease; /* Smooth color transition */
+    margin-right: 20px;
+    /* Increase margin for better spacing */
+    transition: color 0.3s ease;
 }
 
 .header-links a:hover {
-    color: #ddd; /* Change color on hover */
+    color: #ddd;
 }
 
-.upload-icon a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease; /* Smooth color transition */
+/* Header text animation */
+#animated-text {
+    animation: changeText 5s infinite;
+    font-size: 36px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Optional: Adjust font weight as needed */
 }
 
-.upload-icon a i {
-    margin-right: 5px;
-}
+@keyframes changeText {
 
-.upload-icon a:hover {
-    color: #ddd; /* Change color on hover */
+    0%,
+    25% {
+        opacity: 1;
+    }
+
+    30%,
+    40% {
+        opacity: 0;
+    }
+
+    45%,
+    70% {
+        opacity: 1;
+    }
+
+    75%,
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Main Content */
 main {
+    width: 90%;
+    /* Set width to 90% of the viewport width */
     max-width: 800px;
+    /* Limit maximum width */
     margin: 20px auto;
     padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -80,17 +111,36 @@ main {
 .hero .content {
     position: relative;
     z-index: 1;
-    padding: 80px 20px; /* Adjust padding for mobile */
+    padding: 80px 20px;
+    /* Adjust padding for mobile */
+    animation: dropText 1s ease-out;
+    /* Apply drop text animation */
+}
+
+@keyframes dropText {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h2 {
-    font-size: 28px; /* Reduce font size for mobile */
-    margin-bottom: 15px; /* Reduce margin for mobile */
+    font-size: 28px;
+    /* Reduce font size for mobile */
+    margin-bottom: 15px;
+    /* Reduce margin for mobile */
 }
 
 .hero p {
-    font-size: 16px; /* Reduce font size for mobile */
-    margin-bottom: 20px; /* Reduce margin for mobile */
+    font-size: 16px;
+    /* Reduce font size for mobile */
+    margin-bottom: 20px;
+    /* Reduce margin for mobile */
 }
 
 .hero .btn {
@@ -100,18 +150,19 @@ main {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
 }
 
 .hero .btn:hover {
-    background-color: #0056b3; /* Darken background on hover */
+    background-color: #0056b3;
+    /* Darken background on hover */
 }
-
-
 
 /* Resource Cards */
 .resources {
-    margin-top: 30px; /* Adjust margin for mobile */
+    margin-top: 30px;
+    /* Adjust margin for mobile */
 }
 
 .resource-card {
@@ -119,26 +170,246 @@ main {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Smooth scale transition */
+    transition: transform 0.3s ease;
+    /* Smooth scale transition */
 }
 
 .resource-card:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
+    /* Scale up on hover */
 }
 
 .resource-card img {
-    width: 80px; /* Reduce image size for mobile */
+    width: 80px;
+    /* Reduce image size for mobile */
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 .resource-card h3 {
-    font-size: 20px; /* Reduce font size for mobile */
+    font-size: 20px;
+    /* Reduce font size for mobile */
     margin-bottom: 10px;
 }
 
 .resource-card p {
-    font-size: 14px; /* Reduce font size for mobile */
+    font-size: 14px;
+    /* Reduce font size for mobile */
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #20232a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Animation for scrolling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 600px) {
+
+    /* Header adjustments for mobile */
+    .header-container {
+        flex-direction: column;
+        /* Stack elements vertically for mobile */
+        align-items: flex-start;
+        /* Align items to the start for mobile */
+        padding: 0 10px;
+        /* Adjust padding for better spacing */
+    }
+
+    .header-links {
+        margin-top: 10px;
+        /* Add margin for separation on mobile */
+    }
+
+    .header-links a {
+        margin-right: 0;
+        /* Remove right margin for mobile */
+        margin-bottom: 10px;
+        /* Add bottom margin for mobile */
+    }
+
+    /* Resource Cards adjustments for mobile */
+    .resource-card {
+        padding: 15px;
+        /* Reduce padding for mobile */
+        margin-bottom: 15px;
+        /* Reduce margin for mobile */
+    }
+
+    .resource-card img {
+        width: 60px;
+        /* Further reduce image size for mobile */
+    }
+
+    .resource-card h3 {
+        font-size: 18px;
+        /* Further reduce font size for mobile */
+        margin-bottom: 8px;
+        /* Reduce margin for mobile */
+    }
+
+    .resource-card p {
+        font-size: 12px;
+        /* Further reduce font size for mobile */
+    }
+}
+
+/* Media queries for laptop responsiveness */
+@media screen and (min-width: 601px) {
+
+    /* Header adjustments for laptop */
+    .header-container {
+        padding: 0;
+        /* Reset padding for laptop */
+    }
+
+    .header-links a {
+        margin-right: 40px;
+        /* Adjust margin for better spacing on laptops */
+    }
+}
+
+
+.upload-icon a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.upload-icon a i {
+    margin-right: 5px;
+}
+
+.upload-icon a:hover {
+    color: #ddd;
+    /* Change color on hover */
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 20px;
+    /* Adjust padding for mobile */
+}
+
+.hero h2 {
+    font-size: 28px;
+    /* Reduce font size for mobile */
+    margin-bottom: 15px;
+    /* Reduce margin for mobile */
+}
+
+.hero p {
+    font-size: 16px;
+    /* Reduce font size for mobile */
+    margin-bottom: 20px;
+    /* Reduce margin for mobile */
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+    /* Darken background on hover */
+}
+
+
+
+/* Resource Cards */
+.resources {
+    margin-top: 30px;
+    /* Adjust margin for mobile */
+}
+
+.resource-card {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    /* Smooth scale transition */
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+}
+
+.resource-card img {
+    width: 80px;
+    /* Reduce image size for mobile */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.resource-card h3 {
+    font-size: 20px;
+    /* Reduce font size for mobile */
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 14px;
+    /* Reduce font size for mobile */
     color: #666;
 }
 
@@ -171,24 +442,31 @@ footer {
 /* Media queries for mobile responsiveness */
 @media screen and (max-width: 600px) {
     .header-links {
-        margin-top: 20px; /* Increase margin for mobile */
+        margin-top: 20px;
+        /* Increase margin for mobile */
     }
 
     .resource-card {
-        padding: 15px; /* Reduce padding for mobile */
-        margin-bottom: 15px; /* Reduce margin for mobile */
+        padding: 15px;
+        /* Reduce padding for mobile */
+        margin-bottom: 15px;
+        /* Reduce margin for mobile */
     }
 
     .resource-card img {
-        width: 60px; /* Further reduce image size for mobile */
+        width: 60px;
+        /* Further reduce image size for mobile */
     }
 
     .resource-card h3 {
-        font-size: 18px; /* Further reduce font size for mobile */
-        margin-bottom: 8px; /* Reduce margin for mobile */
+        font-size: 18px;
+        /* Further reduce font size for mobile */
+        margin-bottom: 8px;
+        /* Reduce margin for mobile */
     }
 
     .resource-card p {
-        font-size: 12px; /* Further reduce font size for mobile */
+        font-size: 12px;
+        /* Further reduce font size for mobile */
     }
 }
