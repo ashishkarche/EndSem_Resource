@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const animatedText = document.getElementById("animated-text");
-    const words = ["Resource", "Question Paper", "Learning Materials", "Other resources"]; // Add your desired words here
+    const words = ["Resource", "Question Paper", "Learning Materials", "Other Resources"]; // Add your desired words here
     let index = 0;
 
     function changeWord() {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateFontColor();
     }
 
-    setInterval(changeWord, 5000); // Change word every 5 seconds
+    setInterval(changeWord, 3000); // Change word every 5 seconds
 
     function updateFontColor() {
         const gradientColors = [
@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "linear-gradient(to right, #0083b0, #00b4db)"  // Gradient color for "Tools"
         ];
         animatedText.style.background = gradientColors[index];
-        animatedText.style.webkitBackgroundClip = "text"; // Clip the text to the gradient
-        animatedText.style.webkitTextFillColor = "transparent"; // Make the text transparent
+        animatedText.style.color = "transparent"; // Make the text transparent
+        animatedText.style.backgroundClip = "text"; // Clip the text to the gradient
+        animatedText.style.webkitBackgroundClip = "text"; // For Safari compatibility
     }
 
     const fadeInElements = document.querySelectorAll('.fade-in-up');
